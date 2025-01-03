@@ -89,7 +89,7 @@ Welcome to **LoRaFence**, the next evolution of the Navikam project! Developed b
 
 ---
 
-![System Architecture Diagram](path/to/architecture/image)
+![System Architecture Diagram](./Assets/System_Flow_Diagram.png)
 
 ---
 
