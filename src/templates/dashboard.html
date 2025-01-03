@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LoRaFence Dashboard</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
 </head>
+
 <body>
     <div class="wrapper">
         <nav id="sidebar">
@@ -26,7 +28,7 @@
             <header>
                 <div class="header-bar">
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        <span>&#9776;</span>
+                        <span>&#977;</span>
                     </button>
                     <h1>LoRaFence</h1>
                 </div>
@@ -36,8 +38,8 @@
                 <div id="info">
                     <p><strong>Latest Location:</strong></p>
                     <p id="latLon">
-                        Node ID: <span id="nodeId">-</span>, 
-                        Latitude: <span id="latitude">-</span>, 
+                        Node ID: <span id="nodeId">-</span>,
+                        Latitude: <span id="latitude">-</span>,
                         Longitude: <span id="longitude">-</span>
                     </p>
                 </div>
@@ -48,6 +50,7 @@
     </div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    
+
 </body>
+
 </html>
