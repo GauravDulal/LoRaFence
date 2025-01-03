@@ -25,7 +25,19 @@ document.addEventListener("click", (event) => {
     }
 });
 
-
+//  scroll function   
+document.querySelectorAll("[data-scroll-to]").forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+        const targetId = btn.getAttribute("data-scroll-to");
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+        }
+    });
+});
 
 
 
