@@ -39,17 +39,20 @@ Welcome to **LoRaFence**, Developed by the **United Technical College**, LoRaFen
 ## System Components
 
 ### 1. **LoRa Animal Collars**
+
 - Lightweight and durable design
 - Real-time GPS tracking
 - Low-power operation for extended use
 - Integrated haptic sensors and sound emitters for stimuli feedback
 
 ### 2. **Raspberry Pi Display Module**
+
 - Installed in ranger vehicles for intuitive tracking
 - High-resolution display for clear visibility
 - Real-time updates with seamless data synchronization
 
 ### 3. **Multi-Tracker Display System**
+
 - Monitors multiple trackers simultaneously
 - Easy-to-navigate interface
 - Suitable for wildlife patrol teams
@@ -58,15 +61,15 @@ Welcome to **LoRaFence**, Developed by the **United Technical College**, LoRaFen
 
 ## Advantages Over Traditional Technologies
 
-| **Criteria**             | **LoRaFence**                 | **Satellite**             | **Cellular**                |
-|--------------------------|--------------------------------|---------------------------|-----------------------------|
-| **Cost-Effectiveness**   | Low operational cost          | High subscription costs   | SIM cards and data fees     |
-| **Power Efficiency**     | Extremely low power           | High power consumption    | Medium power usage          |
-| **Range & Coverage**     | Up to 50 KM in rural areas    | Global coverage, high cost| Limited to network areas    |
-| **Scalability**          | Supports dense IoT networks   | Expensive to scale        | Limited by cost             |
-| **Data Throughput**      | Ideal for IoT sensors         | Excessive for IoT         | High but inefficient for IoT|
-| **Ease of Deployment**   | Private networks, simple setup| Complex and costly        | Dependent on infrastructure |
-| **Privacy & Security**   | Full control with private nets| Data via third parties    | Data vulnerable to leaks    |
+| **Criteria**           | **LoRaFence**                  | **Satellite**              | **Cellular**                 |
+| ---------------------- | ------------------------------ | -------------------------- | ---------------------------- |
+| **Cost-Effectiveness** | Low operational cost           | High subscription costs    | SIM cards and data fees      |
+| **Power Efficiency**   | Extremely low power            | High power consumption     | Medium power usage           |
+| **Range & Coverage**   | Up to 50 KM in rural areas     | Global coverage, high cost | Limited to network areas     |
+| **Scalability**        | Supports dense IoT networks    | Expensive to scale         | Limited by cost              |
+| **Data Throughput**    | Ideal for IoT sensors          | Excessive for IoT          | High but inefficient for IoT |
+| **Ease of Deployment** | Private networks, simple setup | Complex and costly         | Dependent on infrastructure  |
+| **Privacy & Security** | Full control with private nets | Data via third parties     | Data vulnerable to leaks     |
 
 ---
 
@@ -88,11 +91,10 @@ Welcome to **LoRaFence**, Developed by the **United Technical College**, LoRaFen
 
 ---
 
-
-
 ![System Architecture Diagram](./Assets/System_Flow_Diagram.png)
 
 ---
+
 ## LoRaFence Picture
 
 <table>
@@ -103,8 +105,8 @@ Welcome to **LoRaFence**, Developed by the **United Technical College**, LoRaFen
   </tr>
   <tr>
     <td><img src="./Assets/photo_2025-01-03_19-14-54.jpg" alt="Image 4" width="200"></td>
-    <td><img src="#" alt="Image 5" width="200"></td>
-    <td><img src="#" alt="Image 6" width="200"></td>
+    <td><img src="./Assets/Product1.webp" alt="Image 5" width="200"></td>
+    <td><img src="./Assets/product2.webp" alt="Image 6" width="200"></td>
   </tr>
 </table>
 ---
@@ -118,4 +120,3 @@ LoRaFence is not just a technology solution; it’s a step towards creating a be
 For more information and updates, visit our [GitHub Repository](https://github.com/GauravDulal/LoRaFence).
 
 ---
-
