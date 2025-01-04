@@ -20,6 +20,7 @@
             <ul class="list-unstyled components">
                 <li><a href="#" id="menuHome">Home</a></li>
                 <li><a href="#" id="menuClear">Clear Path</a></li>
+                <li><a href="#" id="menuExport">Export to CSV</a></li>
                 <li><a href="#" id="menuSettings">Settings</a></li>
             </ul>
         </nav>
@@ -53,10 +54,10 @@
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
     <script>
-        var map = L.map('map', { 
-            center: [0, 0], 
+        var map = L.map('map', {
+            center: [0, 0],
             zoom: 13,
-            zoomControl: true 
+            zoomControl: true
         });
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -76,15 +77,15 @@
                 "NODE_4": "orange",
                 "NODE_5": "purple"
             };
-            return colors[nodeId] || "black"; 
-        }
+            return colors[nodeId] || "black";
+        }  // Get Marker Color
 
         function updateMap(nodeId, lat, lon) {
             var newLatLng = [lat, lon];
             if (!markers[nodeId]) {
                 var markerColor = getMarkerColor(nodeId);
-                markers[nodeId] = L.marker(newLatLng, { 
-                    draggable: false, 
+                markers[nodeId] = L.marker(newLatLng, {
+                    draggable: false,
                     icon: L.divIcon({
                         className: 'leaflet-div-icon',
                         html: `<div style="background-color:${markerColor}; width: 20px; height: 20px; border-radius: 50%;"></div>`
@@ -110,10 +111,10 @@
                 longitude: lon
             });
 
-            markers[nodeId].on('click', function() {
+            markers[nodeId].on('click', function () {
                 markers[nodeId].bindPopup('Node ID: ' + nodeId + '<br>Latitude: ' + lat + '<br>Longitude: ' + lon).openPopup();
             });
-        }
+        }  // Update Map
 
         function fetchData() {
             fetch('{{ url_for("get_latest_data") }}')
@@ -126,7 +127,7 @@
                     }
                 })
                 .catch(error => console.error('Error fetching data:', error));
-        }
+        }  // Fetch Data
 
         function exportToCSV() {
             if (nodeDataList.length === 0) {
@@ -146,9 +147,9 @@
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
-        }
+        }  // Export to CSV
 
-        document.getElementById('menuClear').addEventListener('click', function() {
+        document.getElementById('menuClear').addEventListener('click', function () {
             for (let nodeId in markers) {
                 map.removeLayer(markers[nodeId]);
                 map.removeLayer(polylines[nodeId]);
@@ -156,16 +157,17 @@
             markers = {};
             polylines = {};
             nodeDataList = [];
-        });
+        });  // Clear Path
 
-        document.getElementById('menuExport').addEventListener('click', exportToCSV);
+        document.getElementById('menuExport').addEventListener('click', exportToCSV);  // Export to CSV
 
-        document.getElementById('sidebarCollapse').addEventListener('click', function() {
+        // Sidebar toggle
+        document.getElementById('sidebarCollapse').addEventListener('click', function () {
             document.getElementById('sidebar').classList.toggle('active');
         });
 
-        fetchData();
-        setInterval(fetchData, 1000);
+        fetchData();  // Fetch data on page load
+        setInterval(fetchData, 1000); // Fetch data every 1 second
     </script>
 
 </body>
