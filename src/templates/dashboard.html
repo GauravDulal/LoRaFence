@@ -58,6 +58,62 @@
             zoom: 13,
             zoomControl: true 
         });
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        var markers = {};
+        var polylines = {};
+        var nodeDataList = [];
+
+        function getMarkerColor(nodeId) {
+            const colors = {
+                "NODE_1": "red",
+                "NODE_2": "green",
+                "NODE_3": "blue",
+                "NODE_4": "orange",
+                "NODE_5": "purple"
+            };
+            return colors[nodeId] || "black"; 
+        }
+
+        function updateMap(nodeId, lat, lon) {
+            var newLatLng = [lat, lon];
+            if (!markers[nodeId]) {
+                var markerColor = getMarkerColor(nodeId);
+                markers[nodeId] = L.marker(newLatLng, { 
+                    draggable: false, 
+                    icon: L.divIcon({
+                        className: 'leaflet-div-icon',
+                        html: `<div style="background-color:${markerColor}; width: 20px; height: 20px; border-radius: 50%;"></div>`
+                    })
+                }).addTo(map);
+
+                polylines[nodeId] = L.polyline([newLatLng], { color: markerColor, weight: 5 }).addTo(map);
+            } else {
+                markers[nodeId].setLatLng(newLatLng);
+            }
+
+            var latLngs = polylines[nodeId].getLatLngs();
+            latLngs.push(newLatLng);
+            polylines[nodeId].setLatLngs(latLngs);
+
+            document.getElementById('nodeId').textContent = nodeId;
+            document.getElementById('latitude').textContent = lat;
+            document.getElementById('longitude').textContent = lon;
+
+            nodeDataList.push({
+                node_id: nodeId,
+                latitude: lat,
+                longitude: lon
+            });
+
+            markers[nodeId].on('click', function() {
+                markers[nodeId].bindPopup('Node ID: ' + nodeId + '<br>Latitude: ' + lat + '<br>Longitude: ' + lon).openPopup();
+            });
+        }
+
     </script>
 
 </body>
