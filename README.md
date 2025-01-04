@@ -4,7 +4,7 @@ Welcome to **LoRaFence**, Developed by the **United Technical College**, LoRaFen
 
 ---
 
-![LoRaFence Logo](path/to/logo/image)
+![LoRaFence Logo](./src/static/assets/image/logo_readme.png)
 
 ---
 
@@ -88,8 +88,25 @@ Welcome to **LoRaFence**, Developed by the **United Technical College**, LoRaFen
 
 ---
 
+
+
 ![System Architecture Diagram](./Assets/System_Flow_Diagram.png)
 
+---
+## LoRaFence Picture
+
+<table>
+  <tr>
+    <td><img src="./Assets/LoRaFence Equipments.png" alt="Image 1" width="200"></td>
+    <td><img src="./Assets/LoRaFence_Figure.png" alt="Image 2" width="200"></td>
+    <td><img src="./Assets/photo_2025-01-03_19-14-39.jpg" alt="Image 3" width="200"></td>
+  </tr>
+  <tr>
+    <td><img src="./Assets/photo_2025-01-03_19-14-54.jpg" alt="Image 4" width="200"></td>
+    <td><img src="#" alt="Image 5" width="200"></td>
+    <td><img src="#" alt="Image 6" width="200"></td>
+  </tr>
+</table>
 ---
 
 ## Join Us in Winning the Semi;Colon Hackathon!
