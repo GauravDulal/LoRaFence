@@ -213,6 +213,109 @@
         </section>
         <!-- why Lora end  -->
 
+        <!-- Hidden Table Comparison Section -->
+        <section id="comparisonTable" style="overflow: hidden; height: 0; transition: height 0.5s ease;" class="mb-12">
+            <div class="overflow-x-auto">
+                <table class="table-auto border-collapse border border-gray-700 w-4/5 mx-auto mt-6 text-sm sm:text-base"
+                    style="background: rgba(255, 255, 255, 0.1); border-radius: 8px;">
+                    <thead>
+                        <tr class="bg-gray-800 text-white">
+                            <th class="border border-gray-700 px-4 py-3 text-left">Criteria</th>
+                            <th class="border border-gray-700 px-4 py-3 text-left">LoRa</th>
+                            <th class="border border-gray-700 px-4 py-3 text-left">Satellite</th>
+                            <th class="border border-gray-700 px-4 py-3 text-left">Cellular</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hover:bg-gray-700 hover:cursor-pointer">
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Cost-Effectiveness</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Low operational cost; no
+                                recurring fees; uses unlicensed frequency bands</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">High equipment and subscription
+                                costs</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Costs for SIM cards, data plans,
+                                and operation fees</td>
+                        </tr>
+                        <tr class="hover:bg-gray-700 hover:cursor-pointer">
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Power Efficiency</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Extremely low power; devices can
+                                run for years on batteries</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">High power consumption, reducing
+                                battery life</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Higher power usage; shortens
+                                device battery life</td>
+                        </tr>
+                        <tr class="hover:bg-gray-700 hover:cursor-pointer">
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Range & Remote Coverage</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Long-range (up to 15–20 km in
+                                rural areas); independent of infrastructure</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Global coverage but high cost and
+                                latency</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Limited to areas with cellular
+                                network infrastructure</td>
+                        </tr>
+                        <tr class="hover:bg-gray-700 hover:cursor-pointer">
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Scalability</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Supports dense IoT networks with
+                                low bandwidth requirements</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Expensive and limited scalability
+                            </td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Scalability constrained by cost
+                                and spectrum limitations</td>
+                        </tr>
+                        <tr class="hover:bg-gray-700 hover:cursor-pointer">
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Data Throughput</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Ideal for low data rate
+                                applications like IoT sensors</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Excessive and costly for low-data
+                                use cases</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Designed for high throughput,
+                                inefficient for small IoT packets</td>
+                        </tr>
+                        <tr class="hover:bg-gray-700 hover:cursor-pointer">
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Infrastructure</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Can operate with private
+                                gateways; no dependency on external networks</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Requires satellites and external
+                                providers</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Dependent on telecom
+                                infrastructure (towers, base stations)</td>
+                        </tr>
+                        <tr class="hover:bg-gray-700 hover:cursor-pointer">
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Resilience to Interference</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Resistant to interference using
+                                spread spectrum technology (CSS)</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Prone to atmospheric and
+                                line-of-sight interference</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Prone to congestion and
+                                interference in urban areas</td>
+                        </tr>
+                        <tr class="hover:bg-gray-700 hover:cursor-pointer">
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Ease of Deployment</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Simple setup with private
+                                networks</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Complex and costly; specialized
+                                equipment required</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Relies on telecom networks and
+                                agreements</td>
+                        </tr>
+                        <tr class="hover:bg-gray-700 hover:cursor-pointer">
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Privacy & Security</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Private networks offer full
+                                control over data</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Data handled by third-party
+                                providers, raising privacy concerns</td>
+                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Data exposed to risks from
+                                telecom operators</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+
+
         <script src="../static/app.js"></script>
 
     </body>
