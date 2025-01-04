@@ -7,6 +7,8 @@
     <title>LoRaFence Dashboard</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link rel="stylesheet" href="../static/style.css">
 
 </head>
@@ -18,10 +20,24 @@
                 <img src="../static/assets/image/logo_main.png" alt="">
             </div>
             <ul class="list-unstyled components">
-                <li><a href="#" id="menuHome">Home</a></li>
-                <li><a href="#" id="menuClear">Clear Path</a></li>
-                <li><a href="#" id="menuExport">Export to CSV</a></li>
-                <li><a href="#" id="menuSettings">Settings</a></li>
+                <li>
+                    <i class="material-icons">home</i>
+
+                    <a href="#" id="menuHome">Home</a>
+                </li>
+                <li>
+                    <i class="material-icons">route</i>
+
+                    <a href="#" id="menuClear">Clear Path</a>
+                </li>
+                <li> <i class="material-icons">file_download</i>
+
+                    <a href="#" id="menuExport">Export CSV</a>
+                </li>
+                <li>
+                    <i class="material-icons">settings</i>
+                    <a href="#" id="menuSettings">Settings</a>
+                </li>
             </ul>
         </nav>
 
