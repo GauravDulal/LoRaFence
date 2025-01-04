@@ -184,15 +184,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
 }
 
-.latest {
-    font-size: 22px;
-}
 
-.icon1 {
-    font-size: 22px;
-}
+
 
 
 
@@ -202,15 +198,22 @@ body {
 }
 
 #latLon {
-    font-size: 1.2em;
+    font-size: 1.3em;
     display: flex;
-    gap: 10px;
+    align-items: center;
+    gap: 20px;
+    font-weight: bold;
+    /* border: 1px solid #3498db; */
+
 }
 
+
+
+
 #latLon span {
-    background-color: #3498db;
+    background-color: black;
     color: white;
-    padding: 26px 45px;
+    padding: 10px 15px;
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
@@ -225,11 +228,7 @@ body {
     transform: scale(1.05);
 }
 
-#latLon span strong {
-    display: block;
-    font-weight: bold;
-    font-size: 0.9em;
-}
+
 
 
 
