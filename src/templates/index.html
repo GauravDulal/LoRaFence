@@ -216,7 +216,8 @@
         <!-- Hidden Table Comparison Section -->
         <section id="comparisonTable" style="overflow: hidden; height: 0; transition: height 0.5s ease;" class="mb-12">
             <div class="overflow-x-auto">
-                <table class="table-auto border-collapse border border-gray-700 w-4/5 mx-auto mt-6 text-sm sm:text-base"
+                <table
+                    class="table-auto border-collapse border border-gray-700 w-full max-w-screen-lg mx-auto mt-6 text-sm sm:text-base"
                     style="background: rgba(255, 255, 255, 0.1); border-radius: 8px;">
                     <thead>
                         <tr class="bg-gray-800 text-white">
@@ -273,24 +274,6 @@
                                 inefficient for small IoT packets</td>
                         </tr>
                         <tr class="hover:bg-gray-700 hover:cursor-pointer">
-                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Infrastructure</td>
-                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Can operate with private
-                                gateways; no dependency on external networks</td>
-                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Requires satellites and external
-                                providers</td>
-                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Dependent on telecom
-                                infrastructure (towers, base stations)</td>
-                        </tr>
-                        <tr class="hover:bg-gray-700 hover:cursor-pointer">
-                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Resilience to Interference</td>
-                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Resistant to interference using
-                                spread spectrum technology (CSS)</td>
-                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Prone to atmospheric and
-                                line-of-sight interference</td>
-                            <td class="border border-gray-700 px-4 py-2 text-gray-300">Prone to congestion and
-                                interference in urban areas</td>
-                        </tr>
-                        <tr class="hover:bg-gray-700 hover:cursor-pointer">
                             <td class="border border-gray-700 px-4 py-2 text-gray-300">Ease of Deployment</td>
                             <td class="border border-gray-700 px-4 py-2 text-gray-300">Simple setup with private
                                 networks</td>
@@ -312,6 +295,7 @@
                 </table>
             </div>
         </section>
+
 
 
 
