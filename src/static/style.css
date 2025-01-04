@@ -207,6 +207,11 @@ body {
 
 }
 
+.icon1 {
+    display: inline-block;
+    position: relative;
+    left: 17px;
+}
 
 
 
