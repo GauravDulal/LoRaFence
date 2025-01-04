@@ -20,7 +20,7 @@ body {
     position: fixed;
     width: 250px;
     height: 100%;
-    background: linear-gradient(145deg, #34495e, #2c3e50);
+    background: black;
     color: #fff;
     transition: all 0.4s ease;
     z-index: 10;
@@ -33,8 +33,12 @@ body {
 #sidebar .sidebar-header {
     padding: 20px;
     text-align: center;
-    background: #2c3e50;
+    background: black;
     border-bottom: 1px solid #ecf0f1;
+}
+
+.sidebar-header img {
+    height: 2rem;
 }
 
 #sidebar ul {
@@ -48,7 +52,7 @@ body {
 }
 
 #sidebar ul li a {
-    color: #bdc3c7;
+    color: white;
     text-decoration: none;
     font-size: 18px;
     display: block;
@@ -62,18 +66,16 @@ body {
 /* Sidebar Animations */
 #sidebarCollapse {
     cursor: pointer;
-    background-color: #3498db;
+    background-color: black;
     color: white;
     padding: 10px;
-    font-size: 20px;
+    font-size: 40px;
     border: none;
     outline: none;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-#sidebarCollapse:hover {
-    background-color: #2980b9;
-}
+
 
 #content {
     flex-grow: 1;
@@ -82,7 +84,7 @@ body {
     transition: margin-left 0.4s ease;
 }
 
-#sidebar.active + #content {
+#sidebar.active+#content {
     margin-left: 0;
 }
 
@@ -91,11 +93,29 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2980b9;
+    background-color: black;
     color: #fff;
     padding: 15px;
     border-radius: 10px;
     animation: slide-down 0.5s ease forwards;
+}
+
+.components li {
+    margin: 10px 1px;
+    /* border: 1px white solid; */
+
+}
+
+
+.components li:hover {
+    background-color: #0d2833;
+}
+
+
+
+.header-bar img {
+
+    height: 3rem;
 }
 
 @keyframes slide-down {
@@ -103,6 +123,7 @@ body {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -140,6 +161,7 @@ body {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }

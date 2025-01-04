@@ -39,6 +39,17 @@ document.querySelectorAll("[data-scroll-to]").forEach((btn) => {
     });
 });
 
+// comparision table hidden 
+document.getElementById('learnMoreButton').addEventListener('click', () => {
+    const tableDiv = document.getElementById('comparisonTable');
+    if (tableDiv.style.height === "0px" || !tableDiv.style.height) {
+        const scrollHeight = tableDiv.scrollHeight;
+        tableDiv.style.height = `${scrollHeight}px`;
+    } else {
+        tableDiv.style.height = "0px";
+    }
+});
+
 
 
 

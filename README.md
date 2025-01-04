@@ -1,10 +1,10 @@
 # LoRaFence - Advanced Wildlife Tracking System
-![LoRaFence Logo](./static/assets/image/logo_readme.png)
+
+![LoRaFence Logo](./src/static/assets/image/logo_readme.png)
 
 Welcome to **LoRaFence**, the next evolution of the tracking project! Developed by the **United Technical College**, LoRaFence harnesses advanced LoRa technology for precise and efficient wildlife tracking and monitoring. With cutting-edge enhancements like embedded displays, collars for animals, and multi-tracker systems, LoRaFence is poised to redefine animal tracking in conservation and research. This project is a proud participant in the Semi;Colon Hackathon, and with your support, we're aiming for the win!
 
 ---
-
 
 ## Overview
 
