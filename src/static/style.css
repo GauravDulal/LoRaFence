@@ -4,8 +4,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
     background-color: #f7f7f7;
 }
 
@@ -21,6 +20,7 @@ body {
     width: 250px;
     height: 100%;
     background: black;
+    background-color: #18191A;
     color: #fff;
     transition: all 0.4s ease;
     z-index: 10;
@@ -39,6 +39,7 @@ body {
 
 .sidebar-header img {
     height: 2rem;
+    cursor: pointer;
 }
 
 #sidebar ul {
@@ -47,9 +48,12 @@ body {
     list-style: none;
 }
 
-#sidebar ul li {
-    padding: 10px 20px;
-}
+/* #sidebar ul li {} */
+
+/* #sidebar ul li :hover { */
+/* background-color: white; */
+/* transition: background-color .6s ease; */
+/* } */
 
 #sidebar ul li a {
     color: white;
@@ -57,10 +61,13 @@ body {
     font-size: 18px;
     display: block;
     transition: color 0.3s ease;
+    padding: 10px 20px;
+
 }
 
 #sidebar ul li a:hover {
-    color: #3498db;
+    font-weight: bold;
+    /* background-color: white; */
 }
 
 /* Sidebar Animations */
@@ -88,8 +95,16 @@ body {
     margin-left: 0;
 }
 
+
+/* header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+} */
+
 /* Header Bar */
 .header-bar {
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,15 +115,23 @@ body {
     animation: slide-down 0.5s ease forwards;
 }
 
+
 .components li {
     margin: 10px 1px;
-    /* border: 1px white solid; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
 
+}
+
+.icon {
+    margin-left: 20px;
 }
 
 
 .components li:hover {
-    background-color: #0d2833;
+    background-color: #34495e;
+    cursor: pointer;
 }
 
 
@@ -116,6 +139,7 @@ body {
 .header-bar img {
 
     height: 3rem;
+    cursor: pointer;
 }
 
 @keyframes slide-down {
@@ -130,7 +154,7 @@ body {
     }
 }
 
-/* Info Panel */
+/* Info Panel
 #info {
     margin: 20px 0;
     background-color: #ecf0f1;
@@ -146,7 +170,66 @@ body {
 
 #latLon {
     font-size: 1.4em;
+} */
+
+
+/* Info Panel */
+#info {
+    margin: 20px 0;
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
+
+.latest {
+    font-size: 22px;
+}
+
+
+
+
+#info:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+#latLon {
+    font-size: 1.2em;
+    display: flex;
+    gap: 10px;
+}
+
+#latLon span {
+    background-color: #3498db;
+    color: white;
+    padding: 26px 45px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    min-width: 80px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#latLon span:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+#latLon span strong {
+    display: block;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+
+
+
 
 /* Map Section */
 #map {

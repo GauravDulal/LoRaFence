@@ -7,7 +7,17 @@
     <title>LoRaFence Dashboard</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link rel="stylesheet" href="../static/style.css">
+
+    <!-- favicon link  -->
+    <link rel="icon" type="image/png" href="../static/assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../static/assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../static/assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../static/assets/favicon/site.webmanifest" />
+    <!-- favicon link end -->
 
 </head>
 
@@ -18,10 +28,24 @@
                 <img src="../static/assets/image/logo_main.png" alt="">
             </div>
             <ul class="list-unstyled components">
-                <li><a href="#" id="menuHome">Home</a></li>
-                <li><a href="#" id="menuClear">Clear Path</a></li>
-                <li><a href="#" id="menuExport">Export to CSV</a></li>
-                <li><a href="#" id="menuSettings">Settings</a></li>
+                <li>
+                    <i class="material-icons icon">home</i>
+
+                    <a href="#" id="menuHome">Home</a>
+                </li>
+                <li>
+                    <i class="material-icons icon">route</i>
+
+                    <a href="#" id="menuClear">Clear Path</a>
+                </li>
+                <li> <i class="material-icons icon">file_download</i>
+
+                    <a href="#" id="menuExport">Export CSV</a>
+                </li>
+                <li>
+                    <i class="material-icons icon">settings</i>
+                    <a href="#" id="menuSettings">Settings</a>
+                </li>
             </ul>
         </nav>
 
@@ -35,17 +59,20 @@
                     <img src="../static/assets/image/logo_main.png" alt="">
                 </div>
             </header>
-
             <div class="controls">
                 <div id="info">
-                    <p><strong>Latest Location:</strong></p>
+                    <p class="latest "><strong>Latest Location:</strong></p>
                     <p id="latLon">
-                        Node ID: <span id="nodeId">-</span>,
-                        Latitude: <span id="latitude">-</span>,
-                        Longitude: <span id="longitude">-</span>
+                        <span id="nodeId"> <i class="material-icons">star</i>
+                            <strong>Node ID:</strong> </span>
+                        <span id="latitude"> <i class="material-icons">vertical_split</i>
+                            <strong>Latitude:</strong> </span>
+                        <span id="longitude"> <i class="material-icons"> grid_on</i>
+                            <strong>Longitude:</strong> </span>
                     </p>
                 </div>
             </div>
+
 
             <div id="map"></div>
         </div>
