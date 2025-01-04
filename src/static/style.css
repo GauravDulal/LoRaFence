@@ -5,7 +5,7 @@ body {
     padding: 0;
     display: flex;
     height: 100vh;
-    /* overflow: hidden; */
+    overflow: hidden;
     background-color: #f7f7f7;
 }
 
@@ -20,7 +20,7 @@ body {
     position: fixed;
     width: 250px;
     height: 100%;
-    background: black;
+    background: linear-gradient(145deg, #34495e, #2c3e50);
     color: #fff;
     transition: all 0.4s ease;
     z-index: 10;
@@ -33,12 +33,8 @@ body {
 #sidebar .sidebar-header {
     padding: 20px;
     text-align: center;
-    background: black;
+    background: #2c3e50;
     border-bottom: 1px solid #ecf0f1;
-}
-
-.sidebar-header img {
-    height: 2rem;
 }
 
 #sidebar ul {
@@ -52,30 +48,32 @@ body {
 }
 
 #sidebar ul li a {
-    color: white;
+    color: #bdc3c7;
     text-decoration: none;
     font-size: 18px;
     display: block;
     transition: color 0.3s ease;
 }
 
-/* #sidebar ul li a:hover {
+#sidebar ul li a:hover {
     color: #3498db;
-} */
+}
 
 /* Sidebar Animations */
 #sidebarCollapse {
     cursor: pointer;
-    background-color: white;
-    color: black;
+    background-color: #3498db;
+    color: white;
     padding: 10px;
-    font-size: 3rem;
+    font-size: 20px;
     border: none;
     outline: none;
     transition: background-color 0.3s ease;
 }
 
-
+#sidebarCollapse:hover {
+    background-color: #2980b9;
+}
 
 #content {
     flex-grow: 1;
@@ -84,7 +82,7 @@ body {
     transition: margin-left 0.4s ease;
 }
 
-#sidebar.active+#content {
+#sidebar.active + #content {
     margin-left: 0;
 }
 
@@ -93,29 +91,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: #2980b9;
     color: #fff;
     padding: 15px;
     border-radius: 10px;
     animation: slide-down 0.5s ease forwards;
-}
-
-.components li {
-    margin: 10px 1px;
-    /* border: 1px white solid; */
-
-}
-
-
-.components li:hover {
-    background-color: #0d2833;
-}
-
-
-
-.header-bar img {
-
-    height: 3rem;
 }
 
 @keyframes slide-down {
@@ -123,7 +103,6 @@ body {
         opacity: 0;
         transform: translateY(-20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -146,14 +125,12 @@ body {
 
 #latLon {
     font-size: 1.4em;
-
 }
 
 /* Map Section */
 #map {
     height: 70vh;
-    min-width: 70vw;
-    max-width: 100vw;
+    width: 100%;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     animation: fade-in 1s ease forwards;
@@ -163,7 +140,6 @@ body {
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
