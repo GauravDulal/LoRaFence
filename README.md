@@ -115,7 +115,7 @@ LoRaFence is not just a technology solution; it’s a step towards creating a be
 
 ---
 
-For more information and updates, visit our [GitHub Repository](https://github.com/prajjwallive/Navikam).
+For more information and updates, visit our [GitHub Repository](https://github.com/GauravDulal/LoRaFence).
 
 ---
 
