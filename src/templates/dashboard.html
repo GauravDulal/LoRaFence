@@ -52,12 +52,12 @@
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
     <script>
-        // Initialize the map
         var map = L.map('map', { 
             center: [0, 0], 
             zoom: 13,
             zoomControl: true 
         });
+
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '© OpenStreetMap contributors'
@@ -114,6 +114,57 @@
             });
         }
 
+        function fetchData() {
+            fetch('{{ url_for("get_latest_data") }}')
+                .then(response => response.json())
+                .then(data => {
+                    for (const [nodeId, details] of Object.entries(data)) {
+                        if (details.lat && details.lon) {
+                            updateMap(nodeId, details.lat, details.lon);
+                        }
+                    }
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        }
+
+        function exportToCSV() {
+            if (nodeDataList.length === 0) {
+                alert("No data available to export.");
+                return;
+            }
+
+            let csvContent = "data:text/csv;charset=utf-8,Node ID,Latitude,Longitude\n";
+            nodeDataList.forEach(row => {
+                csvContent += `${row.node_id},${row.latitude},${row.longitude}\n`;
+            });
+
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "gps_tracker_data.csv");
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        document.getElementById('menuClear').addEventListener('click', function() {
+            for (let nodeId in markers) {
+                map.removeLayer(markers[nodeId]);
+                map.removeLayer(polylines[nodeId]);
+            }
+            markers = {};
+            polylines = {};
+            nodeDataList = [];
+        });
+
+        document.getElementById('menuExport').addEventListener('click', exportToCSV);
+
+        document.getElementById('sidebarCollapse').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.toggle('active');
+        });
+
+        fetchData();
+        setInterval(fetchData, 1000);
     </script>
 
 </body>
