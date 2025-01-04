@@ -109,7 +109,8 @@ Welcome to **LoRaFence**, Developed by the **United Technical College**, LoRaFen
     <td><img src="./Assets/product2.webp" alt="Image 6" width="200"></td>
   </tr>
 </table>
----
+  
+  ---
 
 ## Join Us in Winning the Semi;Colon Hackathon!
 
