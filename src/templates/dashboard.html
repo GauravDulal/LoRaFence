@@ -7,6 +7,7 @@
     <title>LoRaFence Dashboard</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="../static/style.css">
 
 </head>
 
@@ -14,23 +15,23 @@
     <div class="wrapper">
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h2>LoRaFence</h2>
+                <img src="../static/assets/image/logo_main.png" alt="">
             </div>
             <ul class="list-unstyled components">
                 <li><a href="#" id="menuHome">Home</a></li>
                 <li><a href="#" id="menuClear">Clear Path</a></li>
-                <li><a href="#" id="menuExport">Export to CSV</a></li>
                 <li><a href="#" id="menuSettings">Settings</a></li>
             </ul>
         </nav>
 
+        <!-- Main Content -->
         <div id="content">
             <header>
                 <div class="header-bar">
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        <span>&#977;</span>
+                        <span>&#9776;</span>
                     </button>
-                    <h1>LoRaFence</h1>
+                    <img src="../static/assets/image/logo_main.png" alt="">
                 </div>
             </header>
 
@@ -53,10 +54,10 @@
 
     <script>
         // Initialize the map
-        var map = L.map('map', { 
-            center: [0, 0], 
+        var map = L.map('map', {
+            center: [0, 0],
             zoom: 13,
-            zoomControl: true 
+            zoomControl: true
         });
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
@@ -75,15 +76,15 @@
                 "NODE_4": "orange",
                 "NODE_5": "purple"
             };
-            return colors[nodeId] || "black"; 
+            return colors[nodeId] || "black";
         }
 
         function updateMap(nodeId, lat, lon) {
             var newLatLng = [lat, lon];
             if (!markers[nodeId]) {
                 var markerColor = getMarkerColor(nodeId);
-                markers[nodeId] = L.marker(newLatLng, { 
-                    draggable: false, 
+                markers[nodeId] = L.marker(newLatLng, {
+                    draggable: false,
                     icon: L.divIcon({
                         className: 'leaflet-div-icon',
                         html: `<div style="background-color:${markerColor}; width: 20px; height: 20px; border-radius: 50%;"></div>`
@@ -109,10 +110,15 @@
                 longitude: lon
             });
 
-            markers[nodeId].on('click', function() {
+            markers[nodeId].on('click', function () {
                 markers[nodeId].bindPopup('Node ID: ' + nodeId + '<br>Latitude: ' + lat + '<br>Longitude: ' + lon).openPopup();
             });
         }
+
+        // Sidebar toggle
+        document.getElementById('sidebarCollapse').addEventListener('click', function () {
+            document.getElementById('sidebar').classList.toggle('active');
+        });
 
     </script>
 
