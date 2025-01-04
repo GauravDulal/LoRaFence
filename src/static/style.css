@@ -49,10 +49,10 @@ body {
 
 /* #sidebar ul li {} */
 
-#sidebar ul li :hover {
-    /* background-color: white; */
-    /* transition: background-color .6s ease; */
-}
+/* #sidebar ul li :hover { */
+/* background-color: white; */
+/* transition: background-color .6s ease; */
+/* } */
 
 #sidebar ul li a {
     color: white;
