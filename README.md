@@ -112,12 +112,3 @@ Welcome to **LoRaFence**, Developed by the **United Technical College**, LoRaFen
   
   ---
 
-## Join Us in Winning the Semi;Colon Hackathon!
-
-LoRaFence is not just a technology solution; it’s a step towards creating a better and more sustainable world. Your support and feedback are crucial to the success of this project. Together, we can make a difference and bring home the Semi;Colon Hackathon victory!
-
----
-
-For more information and updates, visit our [GitHub Repository](https://github.com/GauravDulal/LoRaFence).
-
----
