@@ -29,21 +29,21 @@
             </div>
             <ul class="list-unstyled components">
                 <li>
-                    <i class="material-icons">home</i>
+                    <i class="material-icons icon">home</i>
 
                     <a href="#" id="menuHome">Home</a>
                 </li>
                 <li>
-                    <i class="material-icons">route</i>
+                    <i class="material-icons icon">route</i>
 
                     <a href="#" id="menuClear">Clear Path</a>
                 </li>
-                <li> <i class="material-icons">file_download</i>
+                <li> <i class="material-icons icon">file_download</i>
 
                     <a href="#" id="menuExport">Export CSV</a>
                 </li>
                 <li>
-                    <i class="material-icons">settings</i>
+                    <i class="material-icons icon">settings</i>
                     <a href="#" id="menuSettings">Settings</a>
                 </li>
             </ul>
@@ -59,17 +59,20 @@
                     <img src="../static/assets/image/logo_main.png" alt="">
                 </div>
             </header>
-
             <div class="controls">
                 <div id="info">
-                    <p><strong>Latest Location:</strong></p>
+                    <p class="latest "><strong>Latest Location:</strong></p>
                     <p id="latLon">
-                        Node ID: <span id="nodeId">-</span>,
-                        Latitude: <span id="latitude">-</span>,
-                        Longitude: <span id="longitude">-</span>
+                        <span id="nodeId"> <i class="material-icons">star</i>
+                            <strong>Node ID:</strong> </span>
+                        <span id="latitude"> <i class="material-icons">height</i>
+                            <strong>Latitude:</strong> </span>
+                        <span id="longitude"> <i class="material-icons"> straighten</i>
+                            <strong>Longitude:</strong> </span>
                     </p>
                 </div>
             </div>
+
 
             <div id="map"></div>
         </div>
